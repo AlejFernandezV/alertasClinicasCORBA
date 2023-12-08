@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 /Cliente/build/
 /ServidorDeNotificaciones/build/
 /ServidorDeNotificaciones/dist/
 /Cliente/dist/
 /ServidorDeAlertas/build/
 /ServidorDeAlertas/dist/
+=======
+/ServidorDeAlertas/build/
+>>>>>>> a42c542 (Agregando archivos al proyecto)

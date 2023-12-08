@@ -29,4 +29,43 @@ public final class pacienteDTO implements org.omg.CORBA.portable.IDLEntity
     cantEdad = _cantEdad;
   } // ctor
 
+    public int getNoHabitacion() {
+        return noHabitacion;
+    }
+
+    public void setNoHabitacion(int noHabitacion) {
+        this.noHabitacion = noHabitacion;
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public String getTipoEdad() {
+        return tipoEdad;
+    }
+
+    public void setTipoEdad(String tipoEdad) {
+        this.tipoEdad = tipoEdad;
+    }
+
+    public int getCantEdad() {
+        return cantEdad;
+    }
+
+    public void setCantEdad(int cantEdad) {
+        this.cantEdad = cantEdad;
+    }
 } // class pacienteDTO

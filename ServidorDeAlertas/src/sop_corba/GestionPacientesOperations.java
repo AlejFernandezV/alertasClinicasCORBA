@@ -1,5 +1,7 @@
 package sop_corba;
 
+import sop_corba.GestionPacientesPackage.pacienteDTO;
+
 
 /**
 * sop_corba/GestionPacientesOperations.java .
@@ -11,5 +13,5 @@ package sop_corba;
 public interface GestionPacientesOperations 
 {
   boolean registrarPaciente (sop_corba.GestionPacientesPackage.pacienteDTO objPaciente);
-  sop_corba.GestionPacientesPackage.pacienteDTO consultarPaciente (int noHabitacion);
+    pacienteDTO consultarPaciente (int noHabitacion);
 } // interface GestionPacientesOperations

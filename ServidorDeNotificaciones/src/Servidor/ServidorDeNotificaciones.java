@@ -1,6 +1,7 @@
-package servidordeusuarios;
+package Servidor;
 
-public class ServidorDeUsuarios {
+
+public class ServidorDeNotificaciones {
 
     public static void main(String[] args) {
         // TODO code application logic here
