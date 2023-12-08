@@ -9,12 +9,10 @@ public class ControladorCallBackNotificacionesImpl extends UnicastRemoteObject i
     public ControladorCallBackNotificacionesImpl() throws RemoteException{
         super();
     }
-
-    
     
     @Override
     public void notificarAlertaPaciente(alertaDTO objAlerta) throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
     
 }
