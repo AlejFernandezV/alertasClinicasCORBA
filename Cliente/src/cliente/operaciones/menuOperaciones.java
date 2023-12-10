@@ -74,6 +74,8 @@ public class menuOperaciones {
             this.pOps.ingresoNoHabitacion(this.paciente);
             this.pOps.ingresoNombreCompleto(this.paciente);
             this.pOps.ingresoEdad(this.paciente);
+            
+            System.out.println("Imprimiendo info paciente: "+this.paciente.nombres+","+this.paciente.apellidos+","+this.paciente.cantEdad);
 
             boolean bandera = this.ref.registrarPaciente(this.paciente);
             this.getObjIndOps().setCantidadEdad(this.paciente.getCantEdad());
@@ -98,7 +100,10 @@ public class menuOperaciones {
             
             while (true){
                 System.out.println("Enviando indicadores...\n");
+                this.alerta.setNoHabitacion(this.paciente.noHabitacion);
+                this.objIndOps.setObjAlerta(this.alerta);
                 this.objIndOps.generarValoresIndicadores();
+                
                 alertaDTO bandera = this.objRemoto.enviarAlerta(this.alerta);
                 
                 if (bandera != null) {
