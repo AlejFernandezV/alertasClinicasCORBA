@@ -8,6 +8,7 @@ public class GestionPacienteImpl extends GestionPacientesPOA{
     
     private PacienteRepositoryInt objRepositorio;
     
+ 
     public GestionPacienteImpl(PacienteRepositoryInt _repositorio){
         this.objRepositorio = _repositorio;
     }
@@ -19,6 +20,7 @@ public class GestionPacienteImpl extends GestionPacientesPOA{
        try{
            this.objRepositorio.registrarPaciente(objPaciente);
            bandera = true;
+           System.out.println("Registro exitoso");
        }catch(Exception e){
            System.out.println("Error: "+e.getMessage());
        }finally{

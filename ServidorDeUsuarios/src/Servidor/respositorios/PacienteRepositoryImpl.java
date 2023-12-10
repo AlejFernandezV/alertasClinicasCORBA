@@ -7,6 +7,10 @@ public class PacienteRepositoryImpl implements PacienteRepositoryInt{
     
     private HashMap<Integer, pacienteDTO> pacientes;
     
+    public PacienteRepositoryImpl() {
+        this.pacientes = new HashMap();
+    }
+    
     @Override
     public boolean registrarPaciente(pacienteDTO objPaciente) {
         if(objPaciente!=null){

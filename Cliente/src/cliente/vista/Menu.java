@@ -2,7 +2,7 @@ package cliente.vista;
 
 import cliente.operaciones.menuOperaciones;
 import cliente.utilidades.UtilidadesConsola;
-import servidor.controladores.ControladorGestorAlertasInt;
+import Servidor.controladores.ControladorGestorAlertasInt;
 import sop_corba.GestionPacientesOperations;
 
 public class Menu {
