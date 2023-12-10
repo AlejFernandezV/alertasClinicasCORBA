@@ -1,6 +1,7 @@
 package Servidor.servicios;
 
 import Servidor.controladores.ControladorGestorAlertasImpl;
+import Servidor.controladores.ControladorGestorNotificacionesImpl;
 import Servidor.controladores.ControladorGestorNotificacionesInt;
 import Servidor.repositorios.AlertasRepositoryImpl;
 import Servidor.utilidades.UtilidadesRegistroS;
@@ -23,13 +24,14 @@ public class ServidorDeAlertas {
         int numPuertoRMIRegistry = 2023;
         String direccionIpRMIRegistry = "localhost";
 
-        AlertasRepositoryImpl objRepository = new AlertasRepositoryImpl(obtenerReferencia());
+        AlertasRepositoryImpl objRepository = new AlertasRepositoryImpl(obtenerReferencia(),objRemoto);
         ControladorGestorAlertasImpl objControladorGestorAlertas = new ControladorGestorAlertasImpl(objRepository);
+        ControladorGestorNotificacionesImpl objControladorGestorNotificaciones =  new ControladorGestorNotificacionesImpl();
         
         try {
             UtilidadesRegistroS.arrancarNS(numPuertoRMIRegistry);
             UtilidadesRegistroS.RegistrarObjetoRemoto((Remote) objControladorGestorAlertas, direccionIpRMIRegistry, numPuertoRMIRegistry, "idGestorAlertas");
-
+            UtilidadesRegistroS.RegistrarObjetoRemoto((Remote) objControladorGestorNotificaciones, direccionIpRMIRegistry, 2025, "idGestorNotificaciones");
         } catch (RemoteException e) {
             System.err.println("No fue posible Arrancar el NS o Registrar el objeto remoto" + e.getMessage());
         }
@@ -52,7 +54,7 @@ public class ServidorDeAlertas {
             objRef = orb.resolve_initial_references("NameService");
             NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
             // *** Resuelve la referencia del objeto en el N_S ***
-            String name = "objPacientes2";
+            String name = "objUsuariosConsul";
             ref = GestionPacientesHelper.narrow(ncRef.resolve_str(name));
             System.out.println("Obtenido el manejador sobre el servidor de objetos: " + ref);
         } catch (InvalidName | NotFound | CannotProceed | org.omg.CosNaming.NamingContextPackage.InvalidName ex) {
