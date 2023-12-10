@@ -26,7 +26,9 @@ public class AlertasRepositoryImpl implements AlertasRepositoryInt{
 
     public AlertasRepositoryImpl(GestionPacientesOperations _ref,ControladorGestorNotificacionesInt objRemoto) {
         this.ref = _ref;
+        this.objArchivo = new almacenarInfoAlerta();
         this.objAnalisisInd = new analisisIndicadores();
+        this.alertas = new LinkedList();
         this.objRemoto = objRemoto;
     }
 
@@ -80,7 +82,7 @@ public class AlertasRepositoryImpl implements AlertasRepositoryInt{
             this.objRemoto.notificarServidorNotificaciones(objNotificacion);
             System.out.println("Notificación enviada con exito!");
 
-        } catch (Exception ex) {
+        } catch (RemoteException ex) {
             System.out.println("Error al enviar la notificación!");
             System.out.println("Excepcion: "+ex.getMessage());
         }

@@ -2,7 +2,7 @@ package cliente.operaciones;
 
 import java.rmi.RemoteException;
 import servidor.DTO.alertaDTO;
-import servidor.controladores.ControladorGestorAlertasInt;
+import Servidor.controladores.ControladorGestorAlertasInt;
 import sop_corba.GestionPacientesOperations;
 import sop_corba.GestionPacientesPackage.pacienteDTO;
 
@@ -100,10 +100,13 @@ public class menuOperaciones {
             
             while (true){
                 System.out.println("Enviando indicadores...\n");
+                
                 this.alerta.setNoHabitacion(this.paciente.noHabitacion);
                 this.objIndOps.setObjAlerta(this.alerta);
+                this.objIndOps.setCantidadEdad(this.paciente.cantEdad);
+                this.objIndOps.setTipoEdad(this.paciente.tipoEdad);
                 this.objIndOps.generarValoresIndicadores();
-                
+                System.out.println(this.alerta);
                 alertaDTO bandera = this.objRemoto.enviarAlerta(this.alerta);
                 
                 if (bandera != null) {

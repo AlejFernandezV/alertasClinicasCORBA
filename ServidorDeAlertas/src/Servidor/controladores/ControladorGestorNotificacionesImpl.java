@@ -21,13 +21,13 @@ public class ControladorGestorNotificacionesImpl extends UnicastRemoteObject imp
     }
     
     @Override
-    public void notificarServidorNotificaciones(notificacionDTO objNotificacion){
+    public void notificarServidorNotificaciones(notificacionDTO objNotificacion) throws RemoteException{
         System.out.println("Notificando a Servidor notificaciones...");
         this.listaReferencias.forEach(
                 obj -> {
                     try{
                         obj.notificarAlertaPaciente(objNotificacion);
-                    }catch(Exception e){
+                    }catch(RemoteException e){
                         System.out.println("Error: "+e.getMessage());
                     }
                 }

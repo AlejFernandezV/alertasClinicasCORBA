@@ -8,7 +8,7 @@ import org.omg.CosNaming.NamingContextExt;
 import org.omg.CosNaming.NamingContextExtHelper;
 import org.omg.CosNaming.NamingContextPackage.CannotProceed;
 import org.omg.CosNaming.NamingContextPackage.NotFound;
-import servidor.controladores.ControladorGestorAlertasInt;
+import Servidor.controladores.ControladorGestorAlertasInt;
 import sop_corba.GestionPacientesHelper;
 import sop_corba.GestionPacientesOperations;
 
