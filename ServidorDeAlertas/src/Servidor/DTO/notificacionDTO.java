@@ -9,7 +9,7 @@ import java.util.ArrayList;
  *
  * @author Alejandro
  */
-public class Notificacion implements Serializable{
+public class notificacionDTO implements Serializable{
     private int noHabitacion;
     private String nombreCompleto;
     private String edad;
@@ -18,10 +18,10 @@ public class Notificacion implements Serializable{
     private int puntuacion;
     private ArrayList<Indicador> indicadores;
     
-    public Notificacion() {
+    public notificacionDTO() {
     }
 
-    public Notificacion(int noHabitacion, String nombreCompleto, String edad, LocalTime horaAlerta, LocalDate fechaAlerta, int puntuacion) {
+    public notificacionDTO(int noHabitacion, String nombreCompleto, String edad, LocalTime horaAlerta, LocalDate fechaAlerta, int puntuacion) {
         this.noHabitacion = noHabitacion;
         this.nombreCompleto = nombreCompleto;
         this.edad = edad;

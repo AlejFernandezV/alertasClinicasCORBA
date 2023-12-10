@@ -1,7 +1,7 @@
 package servidor.operaciones;
 
 import servidor.DTO.Indicador;
-import servidor.DTO.Notificacion;
+import servidor.DTO.notificacionDTO;
 import servidor.DTO.alertaDTO;
 import servidor.operaciones.verificaciones.verificarNormIndicador;
 import sop_corba.GestionPacientesPackage.pacienteDTO;
@@ -36,7 +36,7 @@ public class analisisIndicadores {
         return sumPuntos;
     }
     
-    public void agregarIndicadoresRaros(pacienteDTO objPaciente,alertaDTO objAlerta,Notificacion objNotificacion){
+    public void agregarIndicadoresRaros(pacienteDTO objPaciente,alertaDTO objAlerta,notificacionDTO objNotificacion){
         verificarNormIndicador objVNI = new verificarNormIndicador(objPaciente,objAlerta);
         if(objVNI.normalidadFC() == 1){
             Indicador objIndicador = new Indicador("Frecuencia Cardiaca",objAlerta.getContInd().getObjFC().getLatidosPM()+"");

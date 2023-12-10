@@ -3,8 +3,11 @@ package cliente.servicios;
 import cliente.utilidades.UtilidadesRegistroC;
 import cliente.vista.Menu;
 import org.omg.CORBA.ORB;
+import org.omg.CORBA.ORBPackage.InvalidName;
 import org.omg.CosNaming.NamingContextExt;
 import org.omg.CosNaming.NamingContextExtHelper;
+import org.omg.CosNaming.NamingContextPackage.CannotProceed;
+import org.omg.CosNaming.NamingContextPackage.NotFound;
 import servidor.controladores.ControladorGestorAlertasInt;
 import sop_corba.GestionPacientesHelper;
 import sop_corba.GestionPacientesOperations;
@@ -14,7 +17,7 @@ public class ClienteDeObjetos {
     private static ControladorGestorAlertasInt objRemoto;
     private static GestionPacientesOperations ref;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidName, NotFound, CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName{
         try {
             //RMI        
             int numPuertoRMIRegistry = 2023;

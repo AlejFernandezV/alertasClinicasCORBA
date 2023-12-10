@@ -3,11 +3,11 @@ package Repositorios;
 
 import java.rmi.RemoteException;
 import java.util.List;
-import DTO.Notificacion;
+import DTO.notificacionDTO;
 
 public interface NotificacionRepositoryInt
 {    
-    public Notificacion registrarNotificacion (Notificacion objNotificacion)throws RemoteException;
+    public notificacionDTO registrarNotificacion (notificacionDTO objNotificacion)throws RemoteException;
 }
 
 

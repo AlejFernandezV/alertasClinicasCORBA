@@ -1,10 +1,10 @@
-package Repositorios;
+package Servidor.Repositorios;
 
 
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import DTO.Notificacion;
+import DTO.notificacionDTO;
 import Repositorios.NotificacionRepositoryInt;
 
 
@@ -14,14 +14,14 @@ import Repositorios.NotificacionRepositoryInt;
  */
 public class NotificacionRepositoryImpl implements NotificacionRepositoryInt{
 
-    private LinkedList<Notificacion> notificaciones;
+    private LinkedList<notificacionDTO> notificaciones;
     
     public NotificacionRepositoryImpl() {
         this.notificaciones = new LinkedList();
     }
 
     @Override
-    public Notificacion registrarNotificacion(Notificacion objNotificacion) {
+    public notificacionDTO registrarNotificacion(notificacionDTO objNotificacion) {
         this.notificaciones.add(objNotificacion);
         objNotificacion.imprimir();
         this.mostrarNotificaciones(objNotificacion.getNoHabitacion());
@@ -30,8 +30,9 @@ public class NotificacionRepositoryImpl implements NotificacionRepositoryInt{
     
     private void mostrarNotificaciones(int noHabitacion){
         DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm:ss");
-        ArrayList<Notificacion> auxNotificacion = new ArrayList<>();
-        for(Notificacion noti: this.notificaciones.reversed()){
+        ArrayList<notificacionDTO> auxNotificacion = new ArrayList<>();
+        for(int i = this.notificaciones.size()-1; i <= 0; i --){
+            notificacionDTO noti = this.notificaciones.get(i);
             if(noti.getNoHabitacion() == noHabitacion){
                 auxNotificacion.add(noti);
             }
