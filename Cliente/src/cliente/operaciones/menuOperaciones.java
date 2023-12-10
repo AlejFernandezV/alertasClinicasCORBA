@@ -100,10 +100,13 @@ public class menuOperaciones {
             
             while (true){
                 System.out.println("Enviando indicadores...\n");
+                
                 this.alerta.setNoHabitacion(this.paciente.noHabitacion);
                 this.objIndOps.setObjAlerta(this.alerta);
+                System.out.println("********************");
                 this.objIndOps.generarValoresIndicadores();
-                
+                System.out.println("++++++++++++++++++++++++");
+                System.out.println(this.alerta);
                 alertaDTO bandera = this.objRemoto.enviarAlerta(this.alerta);
                 
                 if (bandera != null) {
