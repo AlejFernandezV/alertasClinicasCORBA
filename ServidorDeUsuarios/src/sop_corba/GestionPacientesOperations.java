@@ -12,6 +12,6 @@ import sop_corba.GestionPacientesPackage.pacienteDTO;
 
 public interface GestionPacientesOperations 
 {
-  boolean registrarPaciente (sop_corba.GestionPacientesPackage.pacienteDTO objPaciente);
+  boolean registrarPaciente (pacienteDTO objPaciente);
   pacienteDTO consultarPaciente (int noHabitacion);
 } // interface GestionPacientesOperations

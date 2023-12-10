@@ -12,9 +12,9 @@ import org.omg.PortableServer.POAPackage.WrongPolicy;
 import Servidor.respositorios.PacienteRepositoryImpl;
 import sop_corba.GestionPacientes;
 import sop_corba.GestionPacientesHelper;
-import sop_corba.GestionPacientesOperations;
 
 public class ServidorDeUsuarios {
+    
     static PacienteRepositoryImpl objPacienteRepositoryImpl = new PacienteRepositoryImpl();
 
     public static void main(String[] args) {
