@@ -17,7 +17,7 @@ public class ServidorDeObjetos
 {
     public static void main(String args[]) throws RemoteException
     {        
-        int numPuertoRMIRegistry = 2024;
+        int numPuertoRMIRegistry = 2023;
         String direccionIpRMIRegistry = "localhost";
         
         NotificacionRepositoryImpl objRepository = new NotificacionRepositoryImpl();
