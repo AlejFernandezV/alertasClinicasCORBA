@@ -1,5 +1,5 @@
 
-package Repositorios;
+package Servidor.Repositorios;
 
 import java.rmi.RemoteException;
 import java.util.List;

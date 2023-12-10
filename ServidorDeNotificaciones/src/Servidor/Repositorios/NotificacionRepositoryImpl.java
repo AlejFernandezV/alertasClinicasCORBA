@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import DTO.notificacionDTO;
-import Repositorios.NotificacionRepositoryInt;
+import Servidor.Repositorios.NotificacionRepositoryInt;
 
 
 /**

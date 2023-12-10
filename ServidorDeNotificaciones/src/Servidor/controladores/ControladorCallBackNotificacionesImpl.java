@@ -1,7 +1,7 @@
 package Servidor.controladores;
 
 import DTO.notificacionDTO;
-import Repositorios.NotificacionRepositoryInt;
+import Servidor.Repositorios.NotificacionRepositoryInt;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 

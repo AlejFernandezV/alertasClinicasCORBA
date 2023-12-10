@@ -6,7 +6,6 @@
 package Servidor.servicios;
 
 
-import utilidades.UtilidadesRegistroS;
 import java.rmi.RemoteException;
 import Servidor.Repositorios.NotificacionRepositoryImpl;
 import Servidor.controladores.ControladorCallBackNotificacionesImpl;

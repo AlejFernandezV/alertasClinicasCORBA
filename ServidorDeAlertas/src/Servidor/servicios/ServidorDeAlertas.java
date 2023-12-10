@@ -31,7 +31,7 @@ public class ServidorDeAlertas {
         try {
             UtilidadesRegistroS.arrancarNS(numPuertoRMIRegistry);
             UtilidadesRegistroS.RegistrarObjetoRemoto((Remote) objControladorGestorAlertas, direccionIpRMIRegistry, numPuertoRMIRegistry, "idGestorAlertas");
-            UtilidadesRegistroS.RegistrarObjetoRemoto((Remote) objControladorGestorNotificaciones, direccionIpRMIRegistry, 2025, "idGestorNotificaciones");
+            UtilidadesRegistroS.RegistrarObjetoRemoto((Remote) objControladorGestorNotificaciones, direccionIpRMIRegistry, numPuertoRMIRegistry, "idGestorNotificaciones");
         } catch (RemoteException e) {
             System.err.println("No fue posible Arrancar el NS o Registrar el objeto remoto" + e.getMessage());
         }
