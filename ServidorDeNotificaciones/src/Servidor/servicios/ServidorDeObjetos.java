@@ -24,7 +24,7 @@ public class ServidorDeObjetos
 
         ControladorCallBackNotificacionesImpl objRemoto = new ControladorCallBackNotificacionesImpl(objRepository);
         ControladorGestorNotificacionesInt objRemotoServidor
-                = (ControladorGestorNotificacionesInt) UtilidadesRegistroC.obtenerObjRemoto(direccionIpRMIRegistry, numPuertoRMIRegistry, "objServicioGestionNotificaciones");
+                = (ControladorGestorNotificacionesInt) UtilidadesRegistroC.obtenerObjRemoto(direccionIpRMIRegistry, numPuertoRMIRegistry, "idGestorNotificaciones");
         objRemotoServidor.registrarReferenciaRemota(objRemoto);
         System.out.println("Esperando notificaciones");
     }

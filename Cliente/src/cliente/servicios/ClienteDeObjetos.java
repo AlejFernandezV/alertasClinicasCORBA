@@ -41,7 +41,7 @@ public class ClienteDeObjetos {
             NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
 
             // *** Resuelve la referencia del objeto en el N_S ***
-            String name = "objUsuarios";
+            String name = "objUsuariosRegis";
             ref = GestionPacientesHelper.narrow(ncRef.resolve_str(name));
             //********************************************************************
 

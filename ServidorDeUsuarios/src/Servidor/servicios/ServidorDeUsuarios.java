@@ -41,17 +41,24 @@ public class ServidorDeUsuarios {
         rootpoa.the_POAManager().activate();
 
         //*** se genera la referencia del servant
-        org.omg.CORBA.Object obj = rootpoa.servant_to_reference(objRemoto);
-        GestionPacientes href = GestionPacientesHelper.narrow(obj);
+        org.omg.CORBA.Object objRegis = rootpoa.servant_to_reference(objRemoto);
+        GestionPacientes hrefRegis = GestionPacientesHelper.narrow(objRegis);
+        
+        org.omg.CORBA.Object objConsul = rootpoa.servant_to_reference(objRemoto);
+        GestionPacientes hrefConsul = GestionPacientesHelper.narrow(objConsul);
 
         // se obtiene un link al name service
         org.omg.CORBA.Object objref = orb.resolve_initial_references("NameService");
         NamingContextExt ncref = NamingContextExtHelper.narrow(objref);
 
         // *** se realiza el binding de la referencia del servant en el N_S ***
-        String name = "objUsuarios";
-        NameComponent path[] = ncref.to_name(name);
-        ncref.rebind(path, href);
+        String nameRegis = "objUsuariosRegis";
+        NameComponent pathRegis[] = ncref.to_name(nameRegis);
+        ncref.rebind(pathRegis, hrefRegis);
+        
+        String nameConsul = "objUsuariosConsul";
+        NameComponent pathConsul[] = ncref.to_name(nameConsul);
+        ncref.rebind(pathConsul, hrefConsul);
 
         System.out.println("El Servidor esta listo y esperando ...");
 
