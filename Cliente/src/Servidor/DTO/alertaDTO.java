@@ -8,6 +8,7 @@ public class alertaDTO implements Serializable{
     private int noHabitacion;
 
     public alertaDTO() {
+        this.contInd = new contenedorIndicadores();
     }
 
     public alertaDTO(int _noHabitacion) {

@@ -103,9 +103,9 @@ public class menuOperaciones {
                 
                 this.alerta.setNoHabitacion(this.paciente.noHabitacion);
                 this.objIndOps.setObjAlerta(this.alerta);
-                System.out.println("********************");
+                this.objIndOps.setCantidadEdad(this.paciente.cantEdad);
+                this.objIndOps.setTipoEdad(this.paciente.tipoEdad);
                 this.objIndOps.generarValoresIndicadores();
-                System.out.println("++++++++++++++++++++++++");
                 System.out.println(this.alerta);
                 alertaDTO bandera = this.objRemoto.enviarAlerta(this.alerta);
                 
