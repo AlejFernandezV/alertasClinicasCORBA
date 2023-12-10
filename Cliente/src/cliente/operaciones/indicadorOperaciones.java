@@ -14,6 +14,7 @@ public class indicadorOperaciones {
     private String tipoEdad;
     
     public indicadorOperaciones(){
+        this.objAlerta = new alertaDTO();
     }
     
     public indicadorOperaciones(alertaDTO alerta, pacienteDTO paciente) {
