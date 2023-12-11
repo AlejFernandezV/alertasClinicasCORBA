@@ -2,8 +2,7 @@
 package Servidor.Repositorios;
 
 import java.rmi.RemoteException;
-import java.util.List;
-import DTO.notificacionDTO;
+import Servidor.DTO.notificacionDTO;
 
 public interface NotificacionRepositoryInt
 {    

@@ -1,4 +1,4 @@
-package DTO;
+package Servidor.DTO;
 
 import java.io.Serializable;
 import java.time.LocalDate;

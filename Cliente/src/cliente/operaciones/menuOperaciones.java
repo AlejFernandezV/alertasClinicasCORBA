@@ -106,6 +106,7 @@ public class menuOperaciones {
                 this.objIndOps.setCantidadEdad(this.paciente.cantEdad);
                 this.objIndOps.setTipoEdad(this.paciente.tipoEdad);
                 this.objIndOps.generarValoresIndicadores();
+                
                 alertaDTO bandera = this.objRemoto.enviarAlerta(this.alerta);
                 
                 if (bandera != null) {

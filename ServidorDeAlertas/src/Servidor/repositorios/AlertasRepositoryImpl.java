@@ -15,21 +15,21 @@ import sop_corba.GestionPacientesOperations;
 import sop_corba.GestionPacientesPackage.pacienteDTO;
 
 public class AlertasRepositoryImpl implements AlertasRepositoryInt{
-
+    
+    private GestionPacientesOperations ref;
+    private final ControladorGestorNotificacionesInt objRemoto;
     private LinkedList<alertaDTO> alertas;
     private analisisIndicadores objAnalisisInd;
     private almacenarInfoAlerta objArchivo;
-    private GestionPacientesOperations ref;
-    private final ControladorGestorNotificacionesInt objRemoto;
     private pacienteDTO objPaciente;
     private int puntuacion;
 
     public AlertasRepositoryImpl(GestionPacientesOperations _ref,ControladorGestorNotificacionesInt objRemoto) {
         this.ref = _ref;
-        this.objArchivo = new almacenarInfoAlerta();
-        this.objAnalisisInd = new analisisIndicadores();
-        this.alertas = new LinkedList();
         this.objRemoto = objRemoto;
+        this.alertas = new LinkedList();
+        this.objAnalisisInd = new analisisIndicadores();
+        this.objArchivo = new almacenarInfoAlerta();
     }
 
     @Override
@@ -56,16 +56,14 @@ public class AlertasRepositoryImpl implements AlertasRepositoryInt{
     
     private void analizarAlerta(alertaDTO alerta){
         System.out.println("Imprimiendo puntuacion: "+ puntuacion);
-        if(puntuacion == 2){
-            this.objArchivo.guardarEnArchivo(objPaciente, puntuacion);
-            this.enviarNotificacion(objPaciente,alerta,puntuacion);
+        if(this.puntuacion == 2){
             System.out.println("Enviando alerta a enfermeras! ");
         }
-        else if(puntuacion >= 3){
-            this.objArchivo.guardarEnArchivo(objPaciente, puntuacion);
-            this.enviarNotificacion(objPaciente,alerta,puntuacion);
+        else if(this.puntuacion >= 3){    
             System.out.println("Enviando alerta a enfermeras y médico!");
         }
+        this.objArchivo.guardarEnArchivo(this.objPaciente, this.puntuacion);
+        this.enviarNotificacion(this.objPaciente,alerta,this.puntuacion);
     }
     
     private void enviarNotificacion(pacienteDTO paciente,alertaDTO alerta,int puntuacion){

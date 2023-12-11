@@ -2,7 +2,6 @@ package Servidor.servicios;
 
 import Servidor.controladores.ControladorGestorAlertasImpl;
 import Servidor.controladores.ControladorGestorNotificacionesImpl;
-import Servidor.controladores.ControladorGestorNotificacionesInt;
 import Servidor.repositorios.AlertasRepositoryImpl;
 import Servidor.utilidades.UtilidadesRegistroS;
 import java.rmi.Remote;
@@ -19,14 +18,13 @@ import sop_corba.GestionPacientesHelper;
 import sop_corba.GestionPacientesOperations;
 
 public class ServidorDeAlertas {
-    private static ControladorGestorNotificacionesInt objRemoto;
     public static void main(String[] args) throws RemoteException{
         int numPuertoRMIRegistry = 2023;
         String direccionIpRMIRegistry = "localhost";
-
-        AlertasRepositoryImpl objRepository = new AlertasRepositoryImpl(obtenerReferencia(),objRemoto);
+        
+        ControladorGestorNotificacionesImpl objControladorGestorNotificaciones = new ControladorGestorNotificacionesImpl();
+        AlertasRepositoryImpl objRepository = new AlertasRepositoryImpl(obtenerReferencia(),objControladorGestorNotificaciones);
         ControladorGestorAlertasImpl objControladorGestorAlertas = new ControladorGestorAlertasImpl(objRepository);
-        ControladorGestorNotificacionesImpl objControladorGestorNotificaciones =  new ControladorGestorNotificacionesImpl();
         
         try {
             UtilidadesRegistroS.arrancarNS(numPuertoRMIRegistry);

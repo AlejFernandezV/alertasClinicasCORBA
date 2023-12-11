@@ -1,6 +1,6 @@
 package Servidor.controladores;
 
-import DTO.notificacionDTO;
+import Servidor.DTO.notificacionDTO;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

@@ -20,7 +20,6 @@ public class GestionPacienteImpl extends GestionPacientesPOA{
        try{
            this.objRepositorio.registrarPaciente(objPaciente);
            bandera = true;
-           System.out.println("Registro exitoso");
        }catch(Exception e){
            System.out.println("Error: "+e.getMessage());
        }finally{

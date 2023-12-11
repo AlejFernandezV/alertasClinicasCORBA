@@ -1,10 +1,9 @@
 package Servidor.Repositorios;
 
-
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import DTO.notificacionDTO;
+import Servidor.DTO.notificacionDTO;
 import Servidor.Repositorios.NotificacionRepositoryInt;
 
 

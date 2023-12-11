@@ -15,6 +15,7 @@ public class PacienteRepositoryImpl implements PacienteRepositoryInt{
     public boolean registrarPaciente(pacienteDTO objPaciente) {
         if(objPaciente!=null){
             this.pacientes.put(objPaciente.noHabitacion, objPaciente);
+            System.out.println("Registro exitoso");
             return true;
         }
         return false;
@@ -22,6 +23,12 @@ public class PacienteRepositoryImpl implements PacienteRepositoryInt{
 
     @Override
     public pacienteDTO consultarPaciente(int noHabitacion) {
-        return pacientes.get(noHabitacion);
+        pacienteDTO objPaciente = pacientes.get(noHabitacion);
+        if(objPaciente!=null){
+            System.out.println("Paciente encontrado con éxito");
+            return objPaciente;
+        }
+        System.out.println("El paciente no está registrado");
+        return null;
     }    
 }
