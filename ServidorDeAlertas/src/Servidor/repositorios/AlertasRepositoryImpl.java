@@ -7,10 +7,10 @@ import java.rmi.RemoteException;
 import java.util.LinkedList;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import servidor.DTO.alertaDTO;
-import servidor.DTO.notificacionDTO;
-import servidor.operaciones.analisisIndicadores;
-import servidor.operaciones.guardadoInfo.almacenarInfoAlerta;
+import Servidor.DTO.alertaDTO;
+import Servidor.DTO.notificacionDTO;
+import Servidor.operaciones.analisisIndicadores;
+import Servidor.operaciones.guardadoInfo.almacenarInfoAlerta;
 import sop_corba.GestionPacientesOperations;
 import sop_corba.GestionPacientesPackage.pacienteDTO;
 

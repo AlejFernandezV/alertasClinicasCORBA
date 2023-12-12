@@ -1,7 +1,7 @@
-package servidor.DTO;
+package Servidor.DTO;
 
 import java.io.Serializable;
-import servidor.DTO.Indicadores.contenedorIndicadores;
+import Servidor.DTO.Indicadores.contenedorIndicadores;
 
 public class alertaDTO implements Serializable{
     private contenedorIndicadores contInd;

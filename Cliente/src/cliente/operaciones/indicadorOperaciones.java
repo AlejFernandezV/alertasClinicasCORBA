@@ -1,7 +1,7 @@
 package cliente.operaciones;
 
 import java.security.SecureRandom;
-import servidor.DTO.alertaDTO;
+import Servidor.DTO.alertaDTO;
 import sop_corba.GestionPacientesPackage.pacienteDTO;
 
 /**

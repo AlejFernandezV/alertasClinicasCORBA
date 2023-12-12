@@ -3,11 +3,11 @@ package Servidor.controladores;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.LinkedList;
-import servidor.DTO.notificacionDTO;
+import Servidor.DTO.notificacionDTO;
 
 public class ControladorGestorNotificacionesImpl extends UnicastRemoteObject implements ControladorGestorNotificacionesInt{
     
-    private final LinkedList<ControladorCallBackNotificacionesInt> listaReferencias;
+    private LinkedList<ControladorCallBackNotificacionesInt> listaReferencias;
 
     public ControladorGestorNotificacionesImpl() throws RemoteException{
         super();

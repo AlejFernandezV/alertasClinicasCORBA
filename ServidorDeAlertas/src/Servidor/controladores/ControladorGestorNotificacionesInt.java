@@ -2,7 +2,7 @@ package Servidor.controladores;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import servidor.DTO.notificacionDTO;
+import Servidor.DTO.notificacionDTO;
 
 public interface ControladorGestorNotificacionesInt extends Remote{
     boolean registrarReferenciaRemota(ControladorCallBackNotificacionesInt objNotificacion) throws RemoteException;

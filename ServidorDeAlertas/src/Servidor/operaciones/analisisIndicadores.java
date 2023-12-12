@@ -1,9 +1,9 @@
-package servidor.operaciones;
+package Servidor.operaciones;
 
-import servidor.DTO.Indicador;
-import servidor.DTO.notificacionDTO;
-import servidor.DTO.alertaDTO;
-import servidor.operaciones.verificaciones.verificarNormIndicador;
+import Servidor.DTO.Indicador;
+import Servidor.DTO.notificacionDTO;
+import Servidor.DTO.alertaDTO;
+import Servidor.operaciones.verificaciones.verificarNormIndicador;
 import sop_corba.GestionPacientesPackage.pacienteDTO;
 
 /**

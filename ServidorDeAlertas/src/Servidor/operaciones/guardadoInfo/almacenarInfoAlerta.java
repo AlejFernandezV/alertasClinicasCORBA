@@ -1,4 +1,4 @@
-package servidor.operaciones.guardadoInfo;
+package Servidor.operaciones.guardadoInfo;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -3,7 +3,7 @@ package Servidor.controladores;
 import Servidor.repositorios.AlertasRepositoryInt;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import servidor.DTO.alertaDTO;
+import Servidor.DTO.alertaDTO;
 
 public class ControladorGestorAlertasImpl extends UnicastRemoteObject implements ControladorGestorAlertasInt{
 

@@ -1,7 +1,7 @@
 package cliente.operaciones;
 
 import java.rmi.RemoteException;
-import servidor.DTO.alertaDTO;
+import Servidor.DTO.alertaDTO;
 import Servidor.controladores.ControladorGestorAlertasInt;
 import sop_corba.GestionPacientesOperations;
 import sop_corba.GestionPacientesPackage.pacienteDTO;

@@ -1,4 +1,4 @@
-package servidor.DTO.Indicadores;
+package Servidor.DTO.Indicadores;
 
 import java.io.Serializable;
 
